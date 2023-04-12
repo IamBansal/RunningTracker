@@ -1,18 +1,19 @@
-package com.example.runningtracker
+package com.example.runningtracker.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.runningtracker.R
 
-class SetupFragment : Fragment() {
+class SettingsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_setup, container, false)
+        return inflater.inflate(R.layout.fragment_settings, container, false)
     }
 
 }

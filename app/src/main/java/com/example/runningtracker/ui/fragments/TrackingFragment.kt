@@ -29,6 +29,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.Calendar
+import javax.inject.Inject
 import kotlin.math.round
 
 @AndroidEntryPoint
@@ -43,7 +44,9 @@ class TrackingFragment : Fragment() {
     private var pathPoints = mutableListOf<Polyline>()
 
     private var menu: Menu? = null
-    private var weight = 80f
+
+    @set:Inject
+    var weight = 80f
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -91,7 +94,9 @@ class TrackingFragment : Fragment() {
     }
 
     private fun stopRun() {
+        "00:00:00".also { binding.tvTimer.text = it }
         sendCommandToService(ACTION_STOP_SERVICE)
+        curTimeInMillis = 0L
         findNavController().navigate(R.id.action_trackingFragment_to_runFragment)
     }
 
@@ -146,10 +151,10 @@ class TrackingFragment : Fragment() {
     @SuppressLint("SetTextI18n")
     private fun updateTracking(isTracking: Boolean){
         this.isTracking = isTracking
-        if (!isTracking){
+        if (!isTracking && curTimeInMillis > 0L){
             binding.btnToggleRun.text = "Start"
             binding.btnFinishRun.visibility = View.VISIBLE
-        } else {
+        } else if (isTracking) {
             binding.btnToggleRun.text = "Stop"
             menu?.getItem(0)?.isVisible = true
             binding.btnFinishRun.visibility = View.GONE

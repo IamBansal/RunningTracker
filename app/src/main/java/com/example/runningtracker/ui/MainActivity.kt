@@ -1,9 +1,9 @@
 package com.example.runningtracker.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         binding.bottomNavigationView.setupWithNavController(navController)
+        binding.bottomNavigationView.setOnItemReselectedListener { /* No-operation */ }
 
         navController.addOnDestinationChangedListener{_, destination, _ ->
             when(destination.id){

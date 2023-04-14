@@ -21,6 +21,7 @@
         android:label="fragment_run"
         tools:layout="@layout/fragment_run" >
         <action
+            app:popUpToInclusive="true"
             android:id="@+id/action_runFragment_to_trackingFragment"
             app:destination="@id/trackingFragment" />
     </fragment>
@@ -40,7 +41,9 @@
         tools:layout="@layout/fragment_tracking" >
         <action
             android:id="@+id/action_trackingFragment_to_runFragment"
-            app:destination="@id/runFragment" />
+            app:destination="@id/runFragment"
+            app:popUpTo="@id/runFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"

@@ -15,7 +15,8 @@
         app:layout_constraintEnd_toEndOf="@+id/tvTotalDistance"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/tvTotalDistance"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvTotalDistance"
@@ -25,7 +26,8 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/tvTotalDistanceInfo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        tools:ignore="HardcodedText" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvTotalTimeInfo"
@@ -36,7 +38,8 @@
         app:layout_constraintEnd_toEndOf="@+id/tvTotalTime"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/tvTotalTime"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvTotalTime"
@@ -46,7 +49,8 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/tvTotalTimeInfo"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvTotalCaloriesInfo"
@@ -57,7 +61,8 @@
         app:layout_constraintEnd_toEndOf="@+id/tvTotalCalories"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/tvTotalCalories"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvTotalCalories"
@@ -67,7 +72,8 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/tvTotalCaloriesInfo"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvAverageSpeedInfo"
@@ -78,7 +84,8 @@
         app:layout_constraintEnd_toEndOf="@+id/tvAverageSpeed"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/tvAverageSpeed"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvAverageSpeed"
@@ -88,7 +95,8 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/tvAverageSpeedInfo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        tools:ignore="HardcodedText" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -104,8 +112,8 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/lineChart"
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChart"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
